@@ -20,6 +20,7 @@ function addBookToLibrary(title, author, pages, isRead){
 
 function showBooks(){
     const table = document.querySelector("#libraryTable tbody")
+    table.innerHTML = ""; // czysci tabele za kazdym razem
     for(i = 0; i < myLibrary.length; i++){
         const row = document.createElement("tr");
         
@@ -34,6 +35,27 @@ function showBooks(){
         table.appendChild(row);
     }
 }
+
+
+
+document.getElementById("sendInfo").addEventListener("click",  function addNewBook(){
+    event.preventDefault();
+
+    let newAuthor = document.getElementById("author").value;
+    let newTitle = document.getElementById("title").value;
+    let newPages = document.getElementById("pages").value;
+    let statusYes = document.getElementById("yes");
+    let checkedStatus = statusYes.checked ? "read" : "not read yet";
+
+    let newBook = new Book(newTitle, newAuthor, newPages, checkedStatus);
+    myLibrary.push(newBook);
+
+    showBooks();
+
+    document.getElementById("myBookForm").reset(); //resetuje formularz po wysłaniu
+});
+
+//Na przyszłość. Zrobić żeby dodana książka była zapisana, json/php.
 
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");

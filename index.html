@@ -15,9 +15,24 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Rows will be inserted here -->
         </tbody>
     </table>
+    <form action="" method="post" id="myBookForm">
+        <p>Add a new book: </p><br>
+        <label for="author">Author: </label>
+        <input type="text" id="author" name="author"><br>
+        <label for="title">Title: </label>
+        <input type="text" id="title" name="title"><br>
+        <label for="pages">Pages: </label>
+        <input type="number" id="pages" name="pages"><br>
+        <p>Status: </p>
+        <label for="yes">read</label>
+        <input type="radio" id="yes" name="isRead" value="read">
+        <label for="no">not read yet</label>
+        <input type="radio" id="no" name="isRead" value="not read yet"><br>
+        <br><br>
+        <button id="sendInfo">Add book</button>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

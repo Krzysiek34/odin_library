@@ -55,7 +55,7 @@ document.getElementById("sendInfo").addEventListener("click",  function addNewBo
     document.getElementById("myBookForm").reset(); //resetuje formularz po wysłaniu
 });
 
-//Na przyszłość. Zrobić żeby dodana książka była zapisana, json/php.
+//Na przyszłość. Zrobić żeby dodana książka była zapisana, json/php
 
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");

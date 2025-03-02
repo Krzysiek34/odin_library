@@ -38,7 +38,7 @@ function showBooks(){
 
 
 
-document.getElementById("sendInfo").addEventListener("click",  function addNewBook(){
+document.getElementById("sendInfo").addEventListener("click",  function addNewBook(event){
     event.preventDefault();
 
     let newAuthor = document.getElementById("author").value;
